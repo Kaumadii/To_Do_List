@@ -1,50 +1,96 @@
-.common-input {
-    height: 42px;
-    width: 100%;
-    font-size: 14px;
-    border: 1px solid #d1d5db; /* soft gray */
-    border-radius: 9999px; /* pill shape */
-    padding: 0 16px;
-    outline: none;
-    color: #374151;
-    background: white;
+/* ==== App Header Bar ==== */
+
+.app-header {
+  position: sticky;        /* stays on top when scrolling */
+  top: 0;
+  z-index: 40;
+  background: #f9fafb;     /* light header background */
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
 }
 
-.common-input:focus {
-    border-color: #6366f1; /* blue border on focus */
-    box-shadow: 0 0 0 2px rgba(99,102,241,0.2);
+.app-header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
-.btn-soft {
-    height: 36px;
-    padding: 0 22px;
-    border-radius: 9999px;      /* full pill */
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-    transition: 0.20s ease;
-    display: flex;
-    align-items: center;
+
+.app-header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-logo {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.app-tagline {
+  font-size: 12px;
+  color: var(--text-muted, #6b7280);
+}
+
+/* centre the nav nicely */
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.app-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* buttons */
+.btn-theme-toggle,
+.btn-logout {
+  height: 36px;
+  min-width: 110px;
+  border-radius: 9999px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* theme toggle */
+.btn-theme-toggle {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+}
+
+/* logout */
+.btn-logout {
+  background: #3b82f6;
+  color: white;
+  border: none;
+}
+
+/* Dark mode header */
+.app-root.dark .app-header {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+/* mobile tweaks */
+@media (max-width: 768px) {
+  .app-header-inner {
+    flex-wrap: wrap;
     justify-content: center;
-}
+  }
 
-/* Primary soft button (Add) */
-.btn-soft-primary {
-    background: #6366f1;              /* soft indigo */
-    color: white;
-    box-shadow: 0 4px 12px rgba(99,102,241,0.25);
-}
-.btn-soft-primary:hover {
-    background: #4f46e5;
-    box-shadow: 0 6px 14px rgba(79,70,229,0.35);
-}
+  .app-nav {
+    flex-wrap: wrap;
+    order: 3;
+  }
 
-/* Danger soft button (Delete) */
-.btn-soft-danger {
-    background: #ffe4e6;              /* soft rose */
-    color: #b91c1c;
-    box-shadow: 0 4px 10px rgba(244,63,94,0.18);
-}
-.btn-soft-danger:hover {
-    background: #fecdd3;
-    box-shadow: 0 6px 12px rgba(244,63,94,0.28);
+  .app-header-left {
+    align-items: center;
+    text-align: center;
+  }
 }

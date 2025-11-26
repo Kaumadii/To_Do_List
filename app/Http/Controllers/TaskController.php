@@ -50,6 +50,22 @@ class TaskController extends Controller
 
         return $query->orderByDesc('created_at')->limit(5)->get();
     }
+    // GET /api/tasks/all  – return ALL tasks (no pagination) for current user
+public function all(Request $request)
+{
+    $query = Task::query();
+
+    // Only tasks of the logged-in user
+    if (Auth::check()) {
+        $query->where('user_id', Auth::id());
+    }
+
+    // Optional: you can order by due date first, then created_at
+    return $query
+        ->orderBy('due_date')
+        ->orderByDesc('created_at')
+        ->get();
+}
 
     // POST /api/tasks
     public function store(Request $request)

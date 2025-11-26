@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "../css/app.css";
 
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -13,7 +14,10 @@ import RegisterPage from "./pages/RegisterPage";
 import DashboardPage from "./pages/DashboardPage";
 import TasksPage from "./pages/TasksPage";
 import DeletedPage from "./pages/DeletedPage";
-import CategoriesPage from "./pages/CategoriesPage";
+import CategoriesPage from "./pages/categoriesPage";
+import CalendarPage from "./pages/CalendarPage";
+import AppShell from "./components/AppShell";
+
 
 function Root() {
     return (
@@ -51,6 +55,14 @@ function Root() {
                         <ProtectedRoute>
                             <CategoriesPage />
                         </ProtectedRoute>
+                           }
+                        />
+                        <Route
+                        path="/calendar"
+                        element={
+                       <ProtectedRoute>
+                         <CalendarPage />
+                       </ProtectedRoute>
                            }
                         />
  
