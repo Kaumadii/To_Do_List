@@ -1,0 +1,50 @@
+.common-input {
+    height: 42px;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #d1d5db; /* soft gray */
+    border-radius: 9999px; /* pill shape */
+    padding: 0 16px;
+    outline: none;
+    color: #374151;
+    background: white;
+}
+
+.common-input:focus {
+    border-color: #6366f1; /* blue border on focus */
+    box-shadow: 0 0 0 2px rgba(99,102,241,0.2);
+}
+.btn-soft {
+    height: 36px;
+    padding: 0 22px;
+    border-radius: 9999px;      /* full pill */
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.20s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Primary soft button (Add) */
+.btn-soft-primary {
+    background: #6366f1;              /* soft indigo */
+    color: white;
+    box-shadow: 0 4px 12px rgba(99,102,241,0.25);
+}
+.btn-soft-primary:hover {
+    background: #4f46e5;
+    box-shadow: 0 6px 14px rgba(79,70,229,0.35);
+}
+
+/* Danger soft button (Delete) */
+.btn-soft-danger {
+    background: #ffe4e6;              /* soft rose */
+    color: #b91c1c;
+    box-shadow: 0 4px 10px rgba(244,63,94,0.18);
+}
+.btn-soft-danger:hover {
+    background: #fecdd3;
+    box-shadow: 0 6px 12px rgba(244,63,94,0.28);
+}
