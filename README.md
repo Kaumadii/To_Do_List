@@ -62,8 +62,8 @@ Includes task calendar, dashboard analytics, categories, deleted items, authenti
 ---
 
 ## 📸 Screenshots
-![Dashboard](login.png)
+![Login](login.png)
 ![Dashboard](Dashboard-1.png)
 ![Dashboard](Dashboard-2.png)
-![Dashboard](Task_table.png)
+![Task table](Tasktable.png)
 
