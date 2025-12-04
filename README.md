@@ -61,6 +61,5 @@ Includes task calendar, dashboard analytics, categories, deleted items, authenti
 
 ---
 
-## 📁 Project Structure
+## 📸 Screenshots
 
-### React (Frontend)
